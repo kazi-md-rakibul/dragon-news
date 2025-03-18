@@ -13,13 +13,16 @@ const LeftNavbar = () => {
         <h2 className='font-semibold mb-3'>All Category ({categories.length}) </h2>
         <div className='flex flex-col gap-1'>
           {
-            categories.map(category => 
+            categories.map((category) => (
             <NavLink
               to={`/category/${category.category_id}`}
-              className='btn' 
-              key={category.category_id}> {category.category_name} 
-            </NavLink> )
-          }
+              className='btn border-none' 
+              key={category.category_id}
+            > 
+              {category.category_name} 
+
+            </NavLink> 
+          ))}
         </div>
     </div>
   );
