@@ -14,7 +14,7 @@ const Navbar = () => {
       <div className='login'>
         <div className='flex gap-3 items-center'>
           <img src={userIcon} alt="" />
-          <button className='btn btn-neutral rounded-none'>Login</button>
+          <button className='btn btn-neutral'>Login</button>
         </div>
       </div>
     </div>

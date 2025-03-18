@@ -16,11 +16,10 @@ const LeftNavbar = () => {
             categories.map((category) => (
             <NavLink
               to={`/category/${category.category_id}`}
-              className='btn border-none' 
+              className='btn border-none font-medium text-gray-700 py-7' 
               key={category.category_id}
             > 
               {category.category_name} 
-
             </NavLink> 
           ))}
         </div>

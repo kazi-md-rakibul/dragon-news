@@ -7,13 +7,13 @@ const FindUs = () => {
     <div>
       <h2 className="font-semibold mb-3 mt-8">Find Us</h2>
       <div className="join join-vertical w-full *:h-16 *:bg-base-100">
-        <button className="btn join-item justify-start">
+        <button className="btn join-item justify-start text-gray-600">
           <FaFacebook className="text-sky-500 text-4xl bg-slate-100 p-2 rounded-full mr-1"></FaFacebook> Facebook
         </button>
-        <button className="btn join-item justify-start">
+        <button className="btn join-item justify-start text-gray-600">
           <TiSocialTwitter className="text-sky-500 text-4xl bg-slate-100 p-2 rounded-full mr-1"></TiSocialTwitter> Tweeter
         </button>
-        <button className="btn join-item justify-start">
+        <button className="btn join-item justify-start text-gray-600">
           <FaInstagram className="text-red-500 text-4xl bg-slate-100 p-2 rounded-full mr-1"></FaInstagram> Instagram
         </button>
       </div>
