@@ -16,11 +16,12 @@ const LeftNavbar = () => {
             categories.map((category) => (
             <NavLink
               to={`/category/${category.category_id}`}
-              className='btn border-none font-medium text-gray-700 py-7' 
+              className="btn border-none font-medium text-gray-700 py-6 px-6 rounded-lg transition-all duration-300 hover:bg-gradient-to-r hover:from-gray-50 hover:to-transparent hover:translate-x-2 hover:shadow-md flex items-center group relative overflow-hidden" 
               key={category.category_id}
             > 
-              {category.category_name} 
-            </NavLink> 
+              <span className="relative z-10">{category.category_name}</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-50/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
+            </NavLink>
           ))}
         </div>
     </div>

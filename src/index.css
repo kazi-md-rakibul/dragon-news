@@ -4,34 +4,33 @@
 @tailwind utilities;
 
 a.active {
-  background-color: rgba(172, 216, 255, 0.3);
-  font-weight: 500;
+  background: linear-gradient(to right, rgba(219, 234, 254, 0.4), rgba(219, 234, 254, 0.1));
+  font-weight: 600;
   position: relative;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(43, 108, 176, 0.1);
-  border-radius: 4px;
-  color: #000000;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(43, 108, 176, 0.12);
+  border-radius: 0.5rem;
+  color: #1e40af;
+  padding: 2.0rem 1.5rem;
 }
+
 a.active::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, #acd8ff, #2b6cb0);
+  inset: 0;
+  background: linear-gradient(45deg, rgba(172, 216, 255, 0.5), rgba(43, 108, 176, 0.2));
   opacity: 0;
-  transition: opacity 0.3s ease;
-  border-radius: 4px;
+  transition: all 0.3s ease;
+  border-radius: 0.5rem;
   z-index: -1;
 }
 
 a.active:hover {
-  color: #1a365d;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 6px rgba(43, 108, 176, 0.2);
+  color: #1e3a8a;
+  transform: translateX(0.5rem);
+  box-shadow: 0 4px 12px rgba(43, 108, 176, 0.15);
 }
 
 a.active:hover::before {
-  opacity: 0.1;
+  opacity: 1;
 }
