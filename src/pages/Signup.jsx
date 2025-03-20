@@ -1,12 +1,34 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaGithub } from 'react-icons/fa6';
 import { FcGoogle } from 'react-icons/fc';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../provider/AuthProvider';
 
 const Signup = () => {
+  const {createNewUser, setUser} = useContext(AuthContext);
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add registration logic here
+    //get form data
+    const form = new FormData(e.target);
+    const name = form.get("name");
+    const email = form.get("email");
+    const photo = form.get("photo");
+    const password = form.get("password") 
+    console.log(name,email,photo,password)
+    
+
+    //creating a new user or registering a new user using email and password
+    createNewUser(email,password)
+    .then((result)=>{
+      const user = result.user;
+      setUser(user)
+      console.log(user)
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorCode,errorMessage)
+    });
   };
 
   return (
