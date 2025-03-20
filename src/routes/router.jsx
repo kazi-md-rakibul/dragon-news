@@ -5,6 +5,7 @@ import CategoryNews from '../pages/CategoryNews';
 import AuthLayout from '../layouts/AuthLayout';
 import Login from '../pages/Login';
 import Signup from '../pages/Signup';
+import Error from '../components/Error';
 
 const router = createBrowserRouter([
   {
@@ -42,7 +43,7 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
-    element: <h1>Error</h1>
+    element: <Error></Error>,
   }
 ]);
 
