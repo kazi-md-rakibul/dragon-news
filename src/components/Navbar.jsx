@@ -7,7 +7,7 @@ const Navbar = () => {
   const {user} = useContext(AuthContext);
   return (
     <div className='flex justify-between items-center py-4 px-4 rounded-md bg-base-200'>
-      <div className='font-poppins font-extrabold text-xl'>{user? user.name : "The Dragon News"}</div>
+      <div className='font-poppins font-extrabold text-xl'>{user? user.email : "The Dragon News"}</div>
       <div className='space-x-5 '>
         <Link to="/">Home</Link>
         <Link to="/career">Career</Link>
