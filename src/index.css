@@ -11,7 +11,7 @@ a.active {
   font-weight: 500;
   transition: transform 0.15s ease;
 }
-
+/*  */
 a.active:hover {
   transform: translateX(0.125rem);
 }
